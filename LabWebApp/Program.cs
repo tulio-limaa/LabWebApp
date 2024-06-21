@@ -34,7 +34,7 @@ if (string.IsNullOrEmpty(connectionString))
     throw new InvalidOperationException("Missing connection string. Check your user secrets configuration.");
 }
 
-// Register the ApplicationDbContext with MySQL
+// Register the ApplicationDbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
